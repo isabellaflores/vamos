@@ -6,7 +6,7 @@ call mvn -e clean
 if errorlevel 1 goto :EOF
 call mvn -e gluonfx:build -f pom.xml
 if errorlevel 1 goto :EOF
-rcedit-x64 target\gluonfx\x86_64-windows\overlay-installer.exe --set-icon arrow-down.ico
+rcedit-x64 target\gluonfx\x86_64-windows\vamos-installer.exe --set-icon arrow-down.ico
 if errorlevel 1 goto :EOF
 @echo ***************
 @echo BUILD COMPLETE!
