@@ -4,14 +4,14 @@
 
     <groupId>org.example</groupId>
     <artifactId>vamos-installer</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
 
     <scm>
         <url>https://github.com/isabellaflores/vamos</url>
         <connection>scm:git:git://github.com/isabellaflores/vamos.git</connection>
         <developerConnection>scm:git:git@github.com:isabellaflores/vamos.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>vamos-installer-1.1</tag>
     </scm>
 
     <properties>
