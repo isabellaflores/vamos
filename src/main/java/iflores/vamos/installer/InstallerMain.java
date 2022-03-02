@@ -22,6 +22,7 @@ public class InstallerMain extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        stage.setOnCloseRequest(windowEvent -> System.exit(0));
         stage.getIcons().add(new Image("arrow-down.png"));
         _instance = this;
         stage.setTitle("Vamos! Installer");
