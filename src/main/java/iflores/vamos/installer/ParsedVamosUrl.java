@@ -8,6 +8,9 @@ public class ParsedVamosUrl {
     private final String _metadataUrl;
 
     public ParsedVamosUrl(BCSphincs256PublicKey publicKey, String metadataUrl) {
+        if (! metadataUrl.endsWith(".json")) {
+            throw new IllegalStateException();
+        }
         _publicKey = publicKey;
         _metadataUrl = metadataUrl;
     }
@@ -16,8 +19,13 @@ public class ParsedVamosUrl {
         return _publicKey;
     }
 
-    public String getMetadataUrlPrefix() {
+    public String getMetadataUrl() {
         return _metadataUrl;
+    }
+
+    public String getMetadataUrl(FileType fileType) {
+        String metadataUrlPrefix = _metadataUrl.substring(0, _metadataUrl.length() - 5); // remove .json suffix
+        return metadataUrlPrefix + fileType.getExtension();
     }
 
 }

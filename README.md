@@ -13,11 +13,11 @@ chose Nano is that it is fast, and charges zero transaction fees.
 
 # Two-Machine Installation
 
-While it is entirely possible to install everything on a single machine, it is not recommended to install
+While it is entirely possible to install everything on a single machine, it is not recommended installing
 Vamos! on any machine where you play online video games. While the overlay will function, the game itself
 may not. The anti-cheat component of modern video games may detect Vamos!,
 and disallow play with Vamos! running. If you wish to run an overlay on a gaming machine, it is instead
-recommended to invest in a PCILeech-compatible memory acquisition device. A list of supported acquisition
+recommended investing in a PCILeech-compatible memory acquisition device. A list of supported acquisition
 devices can be found on the <a href="https://github.com/ufrisk/pcileech#readme">PCILeech website</a>. In this
 way, a Vamos! overlay can be used without ever installing any software on the target machine.
 

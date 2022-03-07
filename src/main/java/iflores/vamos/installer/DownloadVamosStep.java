@@ -32,7 +32,7 @@ public class DownloadVamosStep extends WizardStep<VamosWizardState> {
                             "KoqARm1yDQIhFqMH4r2k3pW472Q9aclUo/Zbo767r5y55EoHj5kEj62dJrmMCkn4fooxlxEtnBM57yP7Ydm+z2QCqsdLpimj9Ciio59nDMXBqHxXGeKBu+5RmvrovG8IIZe80qF4URYMT5Uju/dRAXvKPWerJNQiVerBN4bbG/HF+zZwbusarO0YWo9hbCoPgRdZKGUplbzuyqWI/LeQ5RVQE95V9ixVPZ8HghKfGAsSFA4uh4KDwe"
             )
     );
-    public static final String VAMOS_DOWNLOAD_URL = "http://xrg6uexvj5gooixni7myqv76cdbsq6ie5f2nf4nreym3wuh4zb22cpyd.onion/vamos/vamos";
+    public static final String VAMOS_DOWNLOAD_URL = "http://xrg6uexvj5gooixni7myqv76cdbsq6ie5f2nf4nreym3wuh4zb22cpyd.onion/vamos/vamos.json";
     private final Node _progressPanel;
     private final Node _failurePanel;
     private final Node _successPanel;

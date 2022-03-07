@@ -79,14 +79,14 @@ public class Utils {
         }
         try {
             SignedMetadataCollection signedMetadataCollection = new SignedMetadataCollection();
-            SignedMetadata jsonMetadata = fetchRemoteMetadata(proxy, parsedVamosUrl.getMetadataUrlPrefix(), FileType.JSON, currentVersion, null, parsedVamosUrl.getPublicKey(), fileTypeConsumer, progressConsumer);
+            SignedMetadata jsonMetadata = fetchRemoteMetadata(proxy, parsedVamosUrl, FileType.JSON, currentVersion, null, fileTypeConsumer, progressConsumer);
             if (jsonMetadata == null) {
                 return null;
             }
             signedMetadataCollection.add(FileType.JSON, jsonMetadata);
             byte[] jsonHash = getSha1Hash(jsonMetadata.getBytes());
             for (FileType fileType : fileTypes) {
-                SignedMetadata metadata = fetchRemoteMetadata(proxy, parsedVamosUrl.getMetadataUrlPrefix(), fileType, null, jsonHash, parsedVamosUrl.getPublicKey(), fileTypeConsumer, progressConsumer);
+                SignedMetadata metadata = fetchRemoteMetadata(proxy, parsedVamosUrl, fileType, null, jsonHash, fileTypeConsumer, progressConsumer);
                 if (metadata == null) {
                     return null;
                 }
@@ -99,9 +99,9 @@ public class Utils {
         }
     }
 
-    private static SignedMetadata fetchRemoteMetadata(Proxy proxy, String metadataUrlPrefix, FileType fileType, BigInteger currentVersion, byte[] jsonHash, BCSphincs256PublicKey publicKey, BiConsumer<FileType, Boolean> fileTypeConsumer, BiConsumer<Integer, Integer> progressConsumer) throws Throwable {
+    private static SignedMetadata fetchRemoteMetadata(Proxy proxy, ParsedVamosUrl parsedVamosUrl, FileType fileType, BigInteger currentVersion, byte[] jsonHash, BiConsumer<FileType, Boolean> fileTypeConsumer, BiConsumer<Integer, Integer> progressConsumer) throws Throwable {
         fileTypeConsumer.accept(fileType, false);
-        URL metadataUrl = new URL(metadataUrlPrefix + fileType.getExtension());
+        URL metadataUrl = new URL(parsedVamosUrl.getMetadataUrl(fileType));
         byte[] bytes = getUrlContent(proxy, metadataUrl, progressConsumer);
         if (fileType == FileType.JSON) {
             if (currentVersion != null) {
@@ -120,9 +120,9 @@ public class Utils {
         }
         // check signature
         fileTypeConsumer.accept(fileType, true);
-        URL signatureUrl = new URL(metadataUrlPrefix + fileType.getExtension() + ".signature");
+        URL signatureUrl = new URL(parsedVamosUrl.getMetadataUrl(fileType) + ".signature");
         byte[] signatureBytes = getUrlContent(proxy, signatureUrl, progressConsumer);
-        boolean signatureOk = verifySignature(publicKey, new ByteArrayInputStream(bytes), fileType, jsonHash, signatureBytes);
+        boolean signatureOk = verifySignature(parsedVamosUrl.getPublicKey(), new ByteArrayInputStream(bytes), fileType, jsonHash, signatureBytes);
         if (!signatureOk) {
             throw new RuntimeException(fileType + " has bad signature");
         }

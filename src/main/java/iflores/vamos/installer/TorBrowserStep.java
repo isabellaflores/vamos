@@ -184,7 +184,7 @@ public class TorBrowserStep extends WizardStep<VamosWizardState> {
                     lock.unlock();
                 }
                 try {
-                    URL url = new URL(DownloadVamosStep.VAMOS_DOWNLOAD_URL + ".json");
+                    URL url = new URL(DownloadVamosStep.VAMOS_DOWNLOAD_URL);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     try {
                         int responseCode = conn.getResponseCode();
