@@ -70,7 +70,7 @@ Shooters may become difficult to play, while other types of games are less affec
 
 # Developing an Overlay
 
-You can use my [sample overlay](https://github.com/isabellaflores/demo-overlay) as a starting point for your own overlay.
+You can use my [sample overlay](https://github.com/isabellaflores/sample-overlay) as a starting point for your own overlay.
 
 Overlays are written in Java. They are run within a restrictive Java sandbox on the user's machine, so you will not be able to write files or make network connections in your overlay code. An API is available to your overlay to perform the following functions:
 
@@ -85,7 +85,7 @@ Based on this information, you can use Java's Swing UI toolkit to draw your over
 Follow these steps to create your own custom overlay:
 
 <ol>
-    <li>Check out my [sample overlay](https://github.com/isabellaflores/demo-overlay) as a starting point.</li>
+    <li>Check out my [sample overlay](https://github.com/isabellaflores/sample-overlay) as a starting point.</li>
     <li>Create your custom overlay by modifying the overlay code.</li>
     <li>Make sure the 'dev server' is running first by clicking the appropriate button in the <b>Developer Tools</b> window within Vamos.</li>
     <li>Test your overlay by running the <b>iflores.vamos.VamosMain</b> main class within your IDE, passing your overlay subclass name as args[0].</li>
