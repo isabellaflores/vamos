@@ -11,7 +11,7 @@ and payment is made using the Nano (XNO) cryptocurrency. These payments encourag
 authors to produce quality overlays, and to keep their overlays up to date. The reason I
 chose Nano is that it is fast, and charges zero transaction fees.
 
-You can get some free Nano for running the demos by using a [Nano faucet](https://hub.nano.org/i/faucets/215).
+You can get some free Nano for running the sample overlays by using a [Nano faucet](https://hub.nano.org/i/faucets/215).
 
 # Two-Machine Installation
 
