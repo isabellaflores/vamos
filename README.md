@@ -2,6 +2,8 @@
 
 In a nutshell, Vamos is a system for creating visual overlays for 3rd party computer software, and for monetizing those overlays. For example, it can be used to add a crosshair or other information to a video game. Additionally, with the proper hardware, the overlay can be shown without installing any software whatsoever on the target machine.
 
+<span style="color:green;font-weight:700">You can make money writing overlays for Vamos!</span> You charge as much or as little as you like, and you receive 90% of the chosen price (I get the other 10% for developing Vamos).
+
 ![](wiki-support/ac.png)
 
 # Pricing
@@ -72,6 +74,17 @@ Shooters may become difficult to play, while other types of games are less affec
 
 # Developing an Overlay
 
+For a developer, Vamos provides:
+
+<ul>
+    <li>integrated cryptocurrency subsystem, so you get paid</li>
+    <li>TOR support to protect your anonymity</li>
+    <li>a trust model, including sandboxed code and digital signatures</li>
+    <li>FPGA/DMA support for customers running a dual-box setup</li>
+    <li>a consistent API for accessing process memory</li>
+    <li>easy distribution and updates via VAMOS urls</li>
+</ul>
+
 You can use my [sample overlay](https://github.com/isabellaflores/sample-overlay) as a starting point for your own overlay.
 
 Overlays are written in Java. They are run within a restrictive Java sandbox on the user's machine, so you will not be able to write files or make network connections in your overlay code. An API is available to your overlay to perform the following functions:
@@ -92,7 +105,7 @@ Follow these steps to create your own custom overlay:
     <li>Make sure the 'dev server' is running first by clicking the appropriate button in the <b>Developer Tools</b> window within Vamos.</li>
     <li>Test your overlay by running the <b>iflores.vamos.VamosMain</b> main class within your IDE, passing your overlay subclass name as args[0].</li>
     <li>Edit the TXT file in the <b>pkg</b> subdirectory, providing a description of your overlay.</li>
-    <li>Edit the JSON file in the <b>pkg</b> subdirectory, providing payment and other info.</li>
+    <li>Edit the JSON file in the <b>pkg</b> subdirectory, providing per-diem pricing and other info.</li>
     <li>Build your overlay by using the Maven 'package' goal. The resulting JAR file is placed into the <b>pkg</b> subdirectory for you.</li>
 </ol>
 
