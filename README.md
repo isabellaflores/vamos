@@ -1,35 +1,36 @@
 # Introduction
 
-In a nutshell, Vamos is a system for creating visual overlays for 3rd party computer software, and for monetizing those overlays. For example, it can be used to add a crosshair or other information to a video game. Additionally, with the proper hardware, the overlay can be shown without installing any software whatsoever on the target machine.
+In a nutshell, Vamos is a system for creating visual overlays for 3rd party computer software, and for monetizing those
+overlays. For example, it can be used to add a crosshair or other information to a video game. Additionally, with the
+proper hardware, the overlay can be shown without installing any software whatsoever on the target machine.
 
-<span style="color:green;font-weight:700">You can make money writing overlays for Vamos!</span> You choose your own price, and you receive 90% of the chosen price (I get the other 10% for developing Vamos).
+<span style="color:green;font-weight:700">You can make money writing overlays for Vamos!</span> You choose your own
+price, and you receive 90% of the chosen price (I get the other 10% for developing Vamos).
 
 ![](wiki-support/ac.png)
 
 # Pricing
 
-Vamos itself is completely free. Overlay authors, however, can charge for their overlay,
-and payment is made using the Nano (XNO) cryptocurrency. These payments encourage overlay
-authors to produce quality overlays, and to keep their overlays up to date. The reason I
-chose Nano is that it is fast, and charges zero transaction fees.
+Vamos itself is completely free. Overlay authors, however, can charge for their overlay, and payment is made using the
+Nano (XNO) cryptocurrency. These payments encourage overlay authors to produce quality overlays, and to keep their
+overlays up to date. The reason I chose Nano is that it is fast, and charges zero transaction fees.
 
 You can get some free Nano for running the sample overlays by using a [Nano faucet](https://hub.nano.org/i/faucets/215).
 
-Vamos is great for streamers! With a two-machine installation, there is zero chance of accidentally
-streaming your use of an overlay.
+Vamos is great for streamers! With a two-machine installation, there is zero chance of accidentally streaming your use
+of an overlay.
 
 # Two-Machine Installation
 
-While it is entirely possible to install everything on a single machine, it is not recommended installing
-Vamos! on any machine where you play online video games. While the overlay will function, the game itself
-may not. The anti-cheat component of modern video games may detect Vamos!,
-and disallow play with Vamos! running. If you wish to run an overlay on a gaming machine, it is instead
-recommended investing in a PCILeech-compatible memory acquisition device. A list of supported acquisition
-devices can be found on the <a href="https://github.com/ufrisk/pcileech#readme">PCILeech website</a>. In this
-way, a Vamos! overlay can be used without ever installing any software on the target machine.
+While it is entirely possible to install everything on a single machine, it is not recommended installing Vamos! on any
+machine where you play online video games. While the overlay will function, the game itself may not. The anti-cheat
+component of modern video games may detect Vamos!, and disallow play with Vamos! running. If you wish to run an overlay
+on a gaming machine, it is instead recommended investing in a PCILeech-compatible memory acquisition device. A list of
+supported acquisition devices can be found on the <a href="https://github.com/ufrisk/pcileech#readme">PCILeech
+website</a>. In this way, a Vamos! overlay can be used without ever installing any software on the target machine.
 
-Therefore, in this guide, I will describe the procedure to set up Vamos! with a hardware memory acquisition
-device. I will use the following terminology:
+Therefore, in this guide, I will describe the procedure to set up Vamos! with a hardware memory acquisition device. I
+will use the following terminology:
 
 <ul class="bodyText">
     <li>The <b>source machine</b> is the machine running Vamos!, Tor Browser, MemProcFS, and ceserver-pcileech</li>
@@ -55,9 +56,8 @@ A total of 4 components will need to be installed on the <b>source</b> machine:
 </ul>
 
 At this point, you will have two machines linked with a USB-C cable via the hardware memory acquisition device.
-Launching an overlay will display that overlay on the source machine's screen, but you really want the overlay
-to display on the target machine's screen, overlaying the content on that screen. There are a few ways
-to do this:
+Launching an overlay will display that overlay on the source machine's screen, but you really want the overlay to
+display on the target machine's screen, overlaying the content on that screen. There are a few ways to do this:
 
 <ul class="bodyText">
     <li>Steam Remote Play, Remote Desktop, or any other program that lets you cast the screen of the target machine
@@ -71,9 +71,9 @@ to do this:
 
 ![](wiki-support/mixer.png)
 
-Keep in mind that any screen casting solution will introduce some latency, so you will want to do your homework
-to find the solutions with the least latency. With too much latency, certain games such as First Person
-Shooters may become difficult to play, while other types of games are less affected by latency issues.
+Keep in mind that any screen casting solution will introduce some latency, so you will want to do your homework to find
+the solutions with the least latency. With too much latency, certain games such as First Person Shooters may become
+difficult to play, while other types of games are less affected by latency issues.
 
 # Developing an Overlay
 
@@ -88,9 +88,12 @@ For a developer, Vamos provides:
     <li>easy distribution and updates via VAMOS urls</li>
 </ul>
 
-You can use my [sample overlay](https://github.com/isabellaflores/sample-overlay) as a starting point for your own overlay.
+You can use my [sample overlay](https://github.com/isabellaflores/sample-overlay) as a starting point for your own
+overlay.
 
-Overlays are written in Java. They are run within a restrictive Java sandbox on the user's machine, so you will not be able to write files or make network connections in your overlay code. An API is available to your overlay to perform the following functions:
+Overlays are written in Java. They are run within a restrictive Java sandbox on the user's machine, so you will not be
+able to write files or make network connections in your overlay code. An API is available to your overlay to perform the
+following functions:
 
 <ul>
     <li>Fetch the list of running processes on the target machine</li>
@@ -98,7 +101,9 @@ Overlays are written in Java. They are run within a restrictive Java sandbox on 
     <li>Store arbitrary data in a special cache that persists between launches</li>
 </ul>
 
-Based on this information, you can use Java's Swing UI toolkit to draw your overlay on the source machine's screen. Included in the Vamos SDK is a special <b>iflores.vamos.OverlayFrame</b> class which produces a transparent window in which you can draw your overlay for the user.
+Based on this information, you can use Java's Swing UI toolkit to draw your overlay on the source machine's screen.
+Included in the Vamos SDK is a special <b>iflores.vamos.OverlayFrame</b> class which produces a transparent window in
+which you can draw your overlay for the user.
 
 Follow these steps to create your own custom overlay:
 
@@ -125,4 +130,7 @@ In order to distribute your overlay, you must perform the following steps:
     <li>Distribute this vamos: URL to people who wish to download your overlay.</li>
 </ol>
 
-The vamos: URL has embedded in it your cryptographic public key. This ensures download integrity, and even if your web server is hacked, it is impossible for the hacker to replace your software with a rogue copy. This URL will remain unchanged across updates to your overlay, and only needs to be generated once. Anyone using the URL will always get the latest deployed version of your overlay.
+The vamos: URL has embedded in it your cryptographic public key. This ensures download integrity, and even if your web
+server is hacked, it is impossible for the hacker to replace your software with a rogue copy. This URL will remain
+unchanged across updates to your overlay, and only needs to be generated once. Anyone using the URL will always get the
+latest deployed version of your overlay.
