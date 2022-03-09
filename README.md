@@ -15,6 +15,9 @@ chose Nano is that it is fast, and charges zero transaction fees.
 
 You can get some free Nano for running the sample overlays by using a [Nano faucet](https://hub.nano.org/i/faucets/215).
 
+Vamos is great for streamers! With a two-machine installation, there is zero chance of accidentally
+streaming your use of an overlay.
+
 # Two-Machine Installation
 
 While it is entirely possible to install everything on a single machine, it is not recommended installing
@@ -63,7 +66,7 @@ to do this:
     <li>Use a video capture card to cast the target machine's display onto the source machine so the overlay can be drawn on it.</li>
     <li>Use a video mixer to mix the source and target video signals onto a single monitor. The mixer should support chroma-key,
         and the transparency chroma color should be set to black. The target machine's display will show through any
-        black pixels of the overlay running on the source machine.</li>
+        black pixels o the overlay running on the source machine.</li>
 </ul>
 
 ![](wiki-support/mixer.png)
