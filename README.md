@@ -7,6 +7,9 @@ proper hardware, the overlay can be shown without installing any software whatso
 <span style="color:green;font-weight:700">You can make money writing overlays for Vamos!</span> You choose your own
 price, and you receive 90% of the chosen price (I get the other 10% for developing Vamos).
 
+Vamos is great for streamers! With a two-machine installation, there is zero chance of accidentally streaming your use
+of an overlay.
+
 ![](wiki-support/ac.png)
 
 # Pricing
@@ -16,9 +19,6 @@ Nano (XNO) cryptocurrency. These payments encourage overlay authors to produce q
 overlays up to date. The reason I chose Nano is that it is fast, and charges zero transaction fees.
 
 You can get some free Nano for running the sample overlays by using a [Nano faucet](https://hub.nano.org/i/faucets/215).
-
-Vamos is great for streamers! With a two-machine installation, there is zero chance of accidentally streaming your use
-of an overlay.
 
 # Two-Machine Installation
 
