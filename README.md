@@ -27,7 +27,7 @@ While it is entirely possible to install everything on a single machine, it is n
 machine where you play online video games. The overlay will function, but the game itself may not. The anti-cheat
 component of modern video games may detect Vamos, and disallow play with Vamos running. If you wish to run an overlay on
 a gaming machine, I recommend following the instructions under [Two-Machine Installation](#two-machine-installation)
-instead.
+or [Virtual Machine Installation](#virtual-machine-installation) instead.
 
 For a single machine installation, a total of 3 components will need to be installed:
 
@@ -75,8 +75,8 @@ display on the target machine's screen, overlaying the content on that screen. T
 
 * [Steam Remote Play](https://youtu.be/nuX2vxdQiOc?t=91), Remote Desktop, or any other program that lets you cast the
   screen of the target machine onto the source machine.
-* Use a video capture card to cast the target
-  machine's display onto the source machine so the overlay can be drawn on it.
+* Use a video capture card to cast the target machine's display onto the source machine so the overlay can be drawn on
+  it.
 * Use a chromakey video mixer to mix the source and target video signals onto a single monitor. The mixer should support
   chroma-key, and the transparency chroma color should be set to black. The target machine's display will show through
   any black pixels o the overlay running on the source machine.
@@ -86,6 +86,29 @@ display on the target machine's screen, overlaying the content on that screen. T
 Keep in mind that any screen casting solution will introduce some latency, so you will want to do your homework to find
 the solutions with the least latency. With too much latency, certain games such as First Person Shooters may become
 difficult to play, while other types of games are less affected by latency issues.
+
+# Virtual Machine Installation
+
+In this section, I will describe the procedure to set up Vamos using a VMware virtual machine. In this way, a Vamos
+overlay can be drawn on the display of a VMware virtual machine, without needing to install any software on the virtual
+machine itself. No special memory acquisition hardware is needed for this method. We will use
+the [PCILeech 'vmware' driver](https://github.com/ufrisk/LeechCore/wiki/Device_VMWare) for this method.
+
+A total of 4 components will need to be installed on the <b>host</b> machine:
+
+* [MemProcFS](https://github.com/ufrisk/MemProcFS) - The PCILeech software that runs on the host machine, that talks to
+  the hardware memory acquisition device installed in the virtual machine, using
+  the [PCILeech 'vmware' driver](https://github.com/ufrisk/LeechCore/wiki/Device_VMWare). Please ensure that MemProcFS
+  is configured properly, and works in a standalone fashion, before trying to use it with Vamos.
+* [Tor Browser](https://www.torproject.org/download/) - Used to protect privacy when downloading overlays, and when
+  updating Vamos itself.
+* [ceserver-pcileech](https://github.com/isabellaflores/ceserver-pcileech) - Provides memory acquisition services
+  between the VMware host and guest machines.
+* [Vamos](https://github.com/isabellaflores/vamos) - The main program you will use to download and launch overlays, and
+  to interact with the Vamos ecosystem.
+
+To use, just launch your virtual machine, Tor Browser, ceserver-pcileech, and Vamos. Once all 4 are running and
+properly configured, you can start using your Vamos overlays.
 
 # Developing an Overlay
 
