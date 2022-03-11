@@ -151,7 +151,7 @@ Follow these steps to create your own custom overlay:
 <ol>
     <li>Check out my [sample overlay](https://github.com/isabellaflores/sample-overlay) as a starting point.</li>
     <li>Create your custom overlay by modifying the overlay code.</li>
-    <li>Make sure the 'dev server' is running first by clicking the appropriate button in the <b>Developer Tools</b> window within Vamos.</li>
+    <li>Make sure the "Dev Server" is running first by clicking the appropriate button in the <b>Developer Tools</b> window within Vamos.</li>
     <li>Test your overlay by running the <b>iflores.vamos.VamosMain</b> main class within your IDE, passing your overlay subclass name as args[0].</li>
     <li>Edit the TXT file in the <b>pkg</b> subdirectory, providing a description of your overlay.</li>
     <li>Edit the JSON file in the <b>pkg</b> subdirectory, providing per-diem pricing and other info.</li>
