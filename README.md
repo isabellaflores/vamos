@@ -4,6 +4,8 @@ In a nutshell, Vamos is a system for creating visual overlays for 3rd party comp
 overlays. For example, it can be used to add a crosshair or other information to a video game. Additionally, with the
 proper hardware, the overlay can be shown without installing any software whatsoever on the target machine.
 
+Here is a short [YouTube Demo](https://youtu.be/xJMp0Bu-_vc) of Vamos in action.
+
 <span style="color:green;font-weight:700">You can make money writing overlays for Vamos</span> You choose your own
 price, and you receive 90% of the chosen price (I get the other 10% for developing Vamos).
 
@@ -11,10 +13,6 @@ Vamos is great for streamers! With a two-machine installation, there is zero cha
 of an overlay.
 
 ![](wiki-support/ac.png)
-
-YouTube demo:
-
-[![Vamos Overlay Example](http://img.youtube.com/vi/xJMp0Bu-_vc/0.jpg)](http://www.youtube.com/watch?v=xJMp0Bu-_vc "Vamos Example Overlay")
 
 # Pricing
 
