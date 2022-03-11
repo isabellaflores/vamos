@@ -6,8 +6,8 @@ proper hardware, the overlay can be shown without installing any software whatso
 
 Here is a short [YouTube Demo](https://youtu.be/xJMp0Bu-_vc) of Vamos in action.
 
-<span style="color:green;font-weight:700">You can make money writing overlays for Vamos</span> You choose your own
-price, and you receive 90% of the chosen price (I get the other 10% for developing Vamos).
+**You can make money writing overlays for Vamos.** You choose your own price, and you receive 90% of the chosen price (I get
+the other 10% for developing Vamos).
 
 Vamos is great for streamers! With a two-machine installation, there is zero chance of accidentally streaming your use
 of an overlay.
@@ -109,8 +109,8 @@ A total of 4 components will need to be installed on the <b>host</b> machine:
 * [Vamos](https://github.com/isabellaflores/vamos) - The main program you will use to download and launch overlays, and
   to interact with the Vamos ecosystem.
 
-To use, just launch your virtual machine, Tor Browser, ceserver-pcileech, and Vamos. Once all 4 are running and
-properly configured, you can start using your Vamos overlays.
+To use, just launch your virtual machine, Tor Browser, ceserver-pcileech, and Vamos. Once all 4 are running and properly
+configured, you can start using your Vamos overlays.
 
 # Developing an Overlay
 
