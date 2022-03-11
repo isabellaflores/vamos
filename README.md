@@ -12,6 +12,10 @@ of an overlay.
 
 ![](wiki-support/ac.png)
 
+YouTube demo:
+
+[![Vamos Overlay Example](http://img.youtube.com/vi/xJMp0Bu-_vc/0.jpg)](http://www.youtube.com/watch?v=xJMp0Bu-_vc "Vamos Example Overlay")
+
 # Pricing
 
 Vamos itself is completely free. Overlay authors, however, can charge for their overlay, and payment is made using the
