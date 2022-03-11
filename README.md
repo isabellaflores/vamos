@@ -96,6 +96,8 @@ overlay can be drawn on the display of a VMware virtual machine, without needing
 machine itself. No special memory acquisition hardware is needed for this method. We will use
 the [PCILeech 'vmware' driver](https://github.com/ufrisk/LeechCore/wiki/Device_VMWare) for this method.
 
+![](wiki-support/vmware.png)
+
 A total of 4 components will need to be installed on the <b>host</b> machine:
 
 * [MemProcFS](https://github.com/ufrisk/MemProcFS) - The PCILeech software that runs on the host machine, that talks to
