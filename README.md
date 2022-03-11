@@ -6,8 +6,8 @@ proper hardware, the overlay can be shown without installing any software whatso
 
 Here is a short [YouTube Demo](https://youtu.be/xJMp0Bu-_vc) of Vamos in action.
 
-**You can make money writing overlays for Vamos.** You choose your own price, and you receive 90% of the chosen price (I get
-the other 10% for developing Vamos).
+**You can make money writing overlays for Vamos.** You choose your own price, and you receive 90% of the chosen price (I
+get the other 10% for developing Vamos).
 
 Vamos is great for streamers! With a two-machine installation, there is zero chance of accidentally streaming your use
 of an overlay.
@@ -92,8 +92,8 @@ difficult to play, while other types of games are less affected by latency issue
 # Virtual Machine Installation
 
 In this section, I will describe the procedure to set up Vamos using a VMware virtual machine. In this way, a Vamos
-overlay can be drawn on the display of a VMware virtual machine, without needing to install any software on the virtual
-machine itself. No special memory acquisition hardware is needed for this method. We will use
+overlay can be drawn by the host on the display window of a VMware virtual machine, without needing to install any
+software on the virtual machine itself. No special memory acquisition hardware is needed for this method. We will use
 the [PCILeech 'vmware' driver](https://github.com/ufrisk/LeechCore/wiki/Device_VMWare) for this method.
 
 ![](wiki-support/vmware.png)
@@ -112,7 +112,9 @@ A total of 4 components will need to be installed on the <b>host</b> machine:
   to interact with the Vamos ecosystem.
 
 To use, just launch your virtual machine, Tor Browser, ceserver-pcileech, and Vamos. Once all 4 are running and properly
-configured, you can start using your Vamos overlays.
+configured, you can start using your Vamos overlays. You will need to either use VMware's
+Unity mode, or enter the pixel coordinates of the VMware display window into Vamos under
+**Edit->Target Display**.
 
 # Developing an Overlay
 
