@@ -112,14 +112,13 @@ A total of 4 components will need to be installed on the <b>host</b> machine:
   to interact with the Vamos ecosystem.
 
 To use, just launch your virtual machine, Tor Browser, ceserver-pcileech, and Vamos. Once all 4 are running and properly
-configured, you can start using your Vamos overlays. You will need to either use VMware's
-Unity mode, or enter the pixel coordinates of the VMware display window into Vamos under
+configured, you can start using your Vamos overlays. You will need to either use VMware's Unity mode, or enter the pixel
+coordinates of the VMware display window into Vamos under
 **Edit->Target Display**.
 
 # Developing an Overlay
 
 For a developer, Vamos provides:
-
 
 * integrated cryptocurrency subsystem, so you get paid
 * TOR support to protect your anonymity
@@ -135,7 +134,6 @@ Overlays are written in Java. They are run within a restrictive Java sandbox on 
 able to write files or make network connections in your overlay code. An API is available to your overlay to perform the
 following functions:
 
-
 * Fetch the list of running processes on the target machine
 * Read the memory of any process on the target machine
 * Store arbitrary data in a special cache that persists between launches
@@ -143,6 +141,10 @@ following functions:
 Based on this information, you can use Java's Swing UI toolkit to draw your overlay on the source machine's screen.
 Included in the Vamos SDK is a special <b>iflores.vamos.OverlayFrame</b> class which produces a transparent window in
 which you can draw your overlay for the user.
+
+**Avoid using an alpha component when drawing your overlay. Chromakey video mixers don't support alpha. Additionally,
+black is the recommended chromakey transparency color, so avoid using black or other very dark colors in your overlay if
+you want them to be usable by chromakey hardware.**
 
 Follow these steps to create your own custom overlay:
 
