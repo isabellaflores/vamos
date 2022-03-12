@@ -120,14 +120,13 @@ Unity mode, or enter the pixel coordinates of the VMware display window into Vam
 
 For a developer, Vamos provides:
 
-<ul>
-    <li>integrated cryptocurrency subsystem, so you get paid</li>
-    <li>TOR support to protect your anonymity</li>
-    <li>a trust model, including sandboxed code and digital signatures</li>
-    <li>FPGA/DMA support for customers running a dual-box setup</li>
-    <li>a consistent API for accessing process memory</li>
-    <li>easy distribution and updates via VAMOS urls</li>
-</ul>
+
+* integrated cryptocurrency subsystem, so you get paid
+* TOR support to protect your anonymity
+* a trust model, including sandboxed code and digital signatures
+* FPGA/DMA support for customers running a dual-box setup
+* a consistent API for accessing process memory
+* easy distribution and updates via VAMOS urls
 
 You can use my [sample overlay](https://github.com/isabellaflores/sample-overlay) as a starting point for your own
 overlay.
@@ -136,11 +135,10 @@ Overlays are written in Java. They are run within a restrictive Java sandbox on 
 able to write files or make network connections in your overlay code. An API is available to your overlay to perform the
 following functions:
 
-<ul>
-    <li>Fetch the list of running processes on the target machine</li>
-    <li>Read the memory of any process on the target machine</li>
-    <li>Store arbitrary data in a special cache that persists between launches</li>
-</ul>
+
+* Fetch the list of running processes on the target machine
+* Read the memory of any process on the target machine
+* Store arbitrary data in a special cache that persists between launches
 
 Based on this information, you can use Java's Swing UI toolkit to draw your overlay on the source machine's screen.
 Included in the Vamos SDK is a special <b>iflores.vamos.OverlayFrame</b> class which produces a transparent window in
