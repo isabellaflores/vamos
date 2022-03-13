@@ -124,7 +124,7 @@ For a developer, Vamos provides:
 * TOR support to protect your anonymity
 * a trust model, including sandboxed code and digital signatures
 * FPGA/DMA support for customers running a dual-box setup
-* a consistent API for accessing process memory
+* A consistent API for accessing process memory and other functions
 * easy distribution and updates via VAMOS urls
 
 You can use my [sample overlay](https://github.com/isabellaflores/sample-overlay) as a starting point for your own
@@ -137,6 +137,8 @@ following functions:
 * Fetch the list of running processes on the target machine
 * Read the memory of any process on the target machine
 * Store arbitrary data in a special cache that persists between launches
+
+[SDK Javadoc](sdk-javadoc/index.html)
 
 Based on this information, you can use Java's Swing UI toolkit to draw your overlay on the source machine's screen.
 Included in the Vamos SDK is a special <b>iflores.vamos.OverlayFrame</b> class which produces a transparent window in
