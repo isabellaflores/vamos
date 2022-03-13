@@ -138,7 +138,7 @@ following functions:
 * Read the memory of any process on the target machine
 * Store arbitrary data in a special cache that persists between launches
 
-[SDK Javadoc](sdk-javadoc/index.html)
+[SDK Javadoc](https://raw.githubusercontent.com/isabellaflores/vamos/master/sdk-javadoc/index.html)
 
 Based on this information, you can use Java's Swing UI toolkit to draw your overlay on the source machine's screen.
 Included in the Vamos SDK is a special <b>iflores.vamos.OverlayFrame</b> class which produces a transparent window in
