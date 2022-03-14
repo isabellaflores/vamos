@@ -6,8 +6,8 @@ proper hardware, the overlay can be shown without installing any software whatso
 
 Here is a short [YouTube Demo](https://youtu.be/xJMp0Bu-_vc) of Vamos in action.
 
-**You can make money writing overlays for Vamos.** You choose your own price, and you receive 90% of the chosen price (I
-get the other 10% for developing Vamos).
+**You can earn cryptocurrency writing overlays for Vamos.** You choose your own cryptocurrency price when you deploy
+your overlay.
 
 Vamos is great for streamers! With a two-machine installation, there is zero chance of accidentally streaming your use
 of an overlay.
